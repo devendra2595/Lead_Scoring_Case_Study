@@ -79,13 +79,55 @@ The data imbalance is 38.54%.
 - 'A free copy of Mastering The Interview' - although most of the people do not want a free copy, the variable does not seem to have any significant impact on the conversion rate.
 - 'Last Notable Activity' - If the Last notable activity is 'SMS Sent' then there is high chance of conversion. also, Modified and email opened categories have good number of conversions but not converted lead count is still higher.
 
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/79c769f0-5e21-45d9-8c0c-f8f44501cf1e)
+
+- For any specialization, If the Lead origin is 'Lead Add Form' then the conversion chances are higher.
+- Customer with 'Busisess' Specialization and lead origin as 'Lead Import' have high chances of conversion.
+- If Specialization is 'Unspecified' then its better to keep the lead as as last priority except if Lead origin is 'Lead Add Form'.
+
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/2c721eef-4032-45ef-8a37-7721d60ce494)
+
+- If the Lead origin is 'Lead Add Form' then the conversion chances are higher for all the cities.
+- Lead Origin 'API' also has moderate chances of conversion across any city except if city is 'Unspecified'
+- If City is not mentioned then its better to not prioritize that lead unless it has Lead origin  as 'Lead Add Form'
+
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/433baccd-79cf-485f-80a7-aec543ed3c02)
+
+- Majority of conversions happen when Lead origin is 'Lead Add Form','Landing Page Submission' or 'API' across all 'Occupation' except 'Unspecified'.
+- Leads in which Occupation is 'Unspecified', should be our last priority.
+- Working professionals have highest conversion ratio across all the Lead Origin
+
+# 4) Data Preprocessing for model building:
+  4.1) Dummy Variable Creation (One-Hot Encodin) 
+  - Mapped variables with categories as Yes/No to 1/0.
+  - Once we create dummy variables, we have to drop one column from each variable to avoid multi-collinearity and dummy variable trap. This can be done using, pd.get_dummies(df,drop_first=True), but manually dropped variables which we do not want to have as a predictors in our final model to make our model more interpretable. e.g. City_Unspecified, Lead_source_others etc.
+  4.2) Handling Outliers :
+    - Capped 'TotalVisits' and 'Page Views Per Visit' at 99th percentile to remove outliers. (150 records were removed)
+  4.3) Splitting data into Train and Test Set:
+    - Splitted into train and test set in 70/30 ratio.
+  4.4) Scaling the numerical data (Normalization):
+    - Scaled train data using MinMax Scaler. (fit_transform)
+    - Transformed test data using same scale from train dataset. (transform)
+      
+# 5) Model Building using StatsModels:
+  - Built 1st model using all the 37 variables, and as expected, a lot of the predictors had p-value > 0.05, which made them
+insignificant.
+  - Used Rrcursive Feature Elimination technique to reduce the number of predictors to 25.
+  - Built 2nd model using 25 predictors and got majority but not all, predictors having p-value < 0.05 and vif < 5.
+  - Step by step dropped insignificant predictors (p-value>0.05) and highly correlated predictors(vif>5) and built model after each operation.
+  - Also, kept a keen eye on the signs of predictors and checked if any of the predictors are flipping signs, if they do then our model would have been highly unstable having predictors which are collinear with each others rather than target variable.
+  - Reached final model number 6, with 22 predictors, having p values within 0.05, it means all the variables are significant, and all vif's within 5 which means there no multicollinearity.
+
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/f4f3b89e-c270-4c1e-9415-ee307d62f466)
+
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/210e4c13-66d4-44fd-b6d1-36246ac36fe6)
+
+
+# 6) Predictions and Model evaluation: 
+  6.1) Predicting target variable
 
 
 
 
-
-4) Data Preprocessing for model building
-5) Model Building using StatsModels
-6) Predictions and Model evaluation
 7) Conclusion
 8) Using PCA to verify the model performance.
