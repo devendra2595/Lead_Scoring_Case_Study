@@ -14,3 +14,30 @@ X Education has appointed you to help them select the most promising leads, i.e.
 # Aim :
 Our aim is to build a Classification model (logistic regression model) and identify 'Hot-Leads' from the pool of leads and assign them lead score based on the probability of conversion.
 
+# Flow of Case Study:
+
+1) Reading and understanding the data
+2) Data Cleaning and Transformation
+3) Exploratory Data Analysis
+4) Data Preprocessing for model building
+5) Model Building using StatsModels
+6) Predictions and Model evaluation
+7) Conclusion
+8) Using PCA to verify the model performance.
+
+
+# 1) Reading and understanding the data
+
+
+
+
+
+
+
+2) Data Cleaning and Transformation
+3) Exploratory Data Analysis
+4) Data Preprocessing for model building
+5) Model Building using StatsModels
+6) Predictions and Model evaluation
+7) Conclusion
+8) Using PCA to verify the model performance.
