@@ -27,6 +27,42 @@ Our aim is to build a Classification model (logistic regression model) and ident
 
 
 # 1) Reading and understanding the data
+The data contains various attributes related to each enquiry.
+Some of them are :
+- origin and source of lead
+- Total visits, time spent on website, number of pages viewed per visit
+- City, Country
+- Specialization opted, Occupation
+- Last activity etc.
+
+The data contains 9240 records and 37 variable with majority of variables as categorical.
+The data imbalance is 38.54%.
+
+# 2) Data Cleaning and Transformation:
+  2.1) Handling Missing Values:
+  - Some variables contained 'Select' value which is as good as Null, so imputed 'Select' with np.NaN.
+  - Dropped variables with more than 40% missing values. imputing them with any suitable value would have caused skewness in the data and ultimately misinterpretation.
+    2.1.1) Handling Missing values in Categorical Variables:
+      - Formed a new category named 'Unspecified' in each variable having missing values less than 40% and more than 5%. e.g City, Specialization, Occupation.
+      - The missing values from 'Lead Source' variable were missing at random, imputed them with 'Reference'.
+    2.1.2) Handling Missing values in Numerical Variables:
+        'TotalVisits'
+      - The majority of missing values from 'TotalVisits' variable had Lead Origin as 'Lead Add From' and 'Lead Import', and both these categories may signify that the lead has been added manually by the sales person into the system from a different Source which could be the reason TotalVisits not being captured.
+      - Almost all the records of 'TotalVisits' variable with Lead Origin as 'Lead Add Form' or 'Lead Import' were 0. so imputed missing values with with 0.
+        - As 'TotalVisits' were 0, the 'Page Views Per Visit' also became 0.
+
+  2.2) Data Transformation:
+    - Dropped unnecessary variables whch were not suitable for model building, like highly skewed, conveying similar information etc.
+    - Merged low records categories together like, City, Occupation etc., merged categories with similar interests like, management specialization, Business Specialization etc.
+    - Dropped variables with only single category.
+    - Dropped two category variables which were highly skewed.
+    
+# 3) Exploratory Data Analysis:
+  3.1 EDA- Numerical Variables:
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/98abfd0d-74ad-4f87-b797-2895f4f77345)
+
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/4abe061e-bc3b-4663-9516-d9e79b5b71a6)
+- No significant correlation present between numerical variables
 
 
 
@@ -34,8 +70,8 @@ Our aim is to build a Classification model (logistic regression model) and ident
 
 
 
-2) Data Cleaning and Transformation
-3) Exploratory Data Analysis
+
+
 4) Data Preprocessing for model building
 5) Model Building using StatsModels
 6) Predictions and Model evaluation
