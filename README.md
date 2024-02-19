@@ -116,7 +116,7 @@ insignificant.
   - Built 2nd model using 25 predictors and got majority but not all, predictors having p-value < 0.05 and vif < 5.
   - Step by step dropped insignificant predictors (p-value>0.05) and highly correlated predictors(vif>5) and built model after each operation.
   - Also, kept a keen eye on the signs of predictors and checked if any of the predictors are flipping signs, if they do then our model would have been highly unstable having predictors which are collinear with each others rather than target variable.
-  - Reached final model number 6, with 22 predictors, having p values within 0.05, it means all the variables are significant, and all vif's within 5 which means there no multicollinearity.
+  - Reached final model number 5, with 22 predictors, having p values within 0.05, it means all the variables are significant, and all vif's within 5 which means there no multicollinearity.
 
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/f4f3b89e-c270-4c1e-9415-ee307d62f466)
 
@@ -124,7 +124,28 @@ insignificant.
 
 
 # 6) Predictions and Model evaluation: 
-  6.1) Predicting target variable
+
+  6.1) Predicting target variable (train dataset):
+  - The output we got as prediction, is the probability of successful conversion of lead.
+  - This probability can be converted into score out of 100 and utilised as lead score but how would we know which lead is a potential hot-lead? for that, we need to decide a cut-off as per our business needs.
+  - Assumed cut-off to be 0.5 and found out the evaluation metrics as follows:
+    1) Sensitivity (TPR)- 71.33
+    2) Specificity - 88.41
+    3) False Positive Rate (FPR) - 11.58
+    4) Positive Predictive Value - 79.15
+    5) Negative Predictive Value - 83.32
+  - From this, we can say that we were able to correctly predict,
+      - 71.33% of leads which are going to convert.
+      - 88.41% of leads which are not going to convert
+  - We need to improve the results by tweaking the cut-off value. but there is a trade-off involved between sensitivity and specificity which can be visualised by ROC curve.
+
+  6.2) Plotting the ROC Curve:
+    - It shows the tradeoff between sensitivity and specificity (any increase in sensitivity will be accompanied by a
+decrease in specificity).
+    - The closer the curve follows the left-hand border and then the top border of the ROC space, the more accurate the test.
+    - The closer the curve comes to the 45-degree diagonal of the ROC space, the less accurate the test.
+  
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/f59473d0-088a-420a-9672-851495425b6e)
 
 
 
