@@ -58,14 +58,26 @@ The data imbalance is 38.54%.
     - Dropped two category variables which were highly skewed.
     
 # 3) Exploratory Data Analysis:
-  3.1 EDA- Numerical Variables:
+  3.1) EDA- Numerical Variables:
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/98abfd0d-74ad-4f87-b797-2895f4f77345)
 
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/4abe061e-bc3b-4663-9516-d9e79b5b71a6)
+
 - No significant correlation present between numerical variables
 
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/719bc98c-a8ce-4d02-878a-5f069bc58098)
 
-
+  3.2) EDA - Categorical Variables
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/b464d1ed-fbb0-404a-9176-d6ff4faa2f9b)
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/55c653af-5a7d-41d7-ba1a-8a9a268dc481)
+    - "Lead Origin"- although "Landing page submission" and "API" have higher contribution, "Lead Add Form" have higher percentage of conversion.
+    - "Lead Source"- "direct traffic" & "Google" have highest contribution but "reference" and 'welingak website' ensures the conversion in most of the cases. 
+    - "Do not email"- we can say that those who agree to not receive email have slightly lower conversion rate.
+    - "Specialization" - Most of the clients opt for management specialization.
+    - "Occupation" - a lot of clients are unemployed but there is quite high chance of conversion if client is employed(working professional).
+    - "City" - although most of the people are from mumbai, but the conversion rate is quite similar for non-mumbai or other cities.
+    - 'A free copy of Mastering The Interview' - although most of the people do not want a free copy, the variable does not seem to have any significant impact on the conversion rate.
+    - 'Last Notable Activity' - If the Last notable activity is 'SMS Sent' then there is high chance of conversion. also, Modified and email opened categories have good number of conversions but not converted lead count is still higher.
 
 
 
