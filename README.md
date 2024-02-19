@@ -59,6 +59,7 @@ The data imbalance is 38.54%.
     
 # 3) Exploratory Data Analysis:
   3.1) EDA- Numerical Variables:
+  
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/98abfd0d-74ad-4f87-b797-2895f4f77345)
 
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/4abe061e-bc3b-4663-9516-d9e79b5b71a6)
@@ -68,6 +69,7 @@ The data imbalance is 38.54%.
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/719bc98c-a8ce-4d02-878a-5f069bc58098)
 
   3.2) EDA - Categorical Variables
+  
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/b464d1ed-fbb0-404a-9176-d6ff4faa2f9b)
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/55c653af-5a7d-41d7-ba1a-8a9a268dc481)
 - "Lead Origin"- although "Landing page submission" and "API" have higher contribution, "Lead Add Form" have higher percentage of conversion.
