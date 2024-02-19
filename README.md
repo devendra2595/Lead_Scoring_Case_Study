@@ -142,10 +142,10 @@ insignificant.
   - We need to improve the results by tweaking the cut-off value. but there is a trade-off involved between sensitivity and specificity which can be visualised by ROC curve.
 
   6.2) Plotting the ROC Curve:
-    - It shows the tradeoff between sensitivity and specificity (any increase in sensitivity will be accompanied by a
+  - It shows the tradeoff between sensitivity and specificity (any increase in sensitivity will be accompanied by a
 decrease in specificity).
-    - The closer the curve follows the left-hand border and then the top border of the ROC space, the more accurate the test.
-    - The closer the curve comes to the 45-degree diagonal of the ROC space, the less accurate the test.
+  - The closer the curve follows the left-hand border and then the top border of the ROC space, the more accurate the test.
+  - The closer the curve comes to the 45-degree diagonal of the ROC space, the less accurate the test.
   
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/f59473d0-088a-420a-9672-851495425b6e)
 
