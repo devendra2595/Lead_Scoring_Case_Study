@@ -196,6 +196,28 @@ decrease in specificity).
   - As we can see that, the logistic regression model that we built by using statsmodels and PCA have almost similar metric scores on test dataset.
   - So we can say that, we have used right predictors to build or LR model.
 
+# 9) Building Classification Model using Support Vector Machine and Random Forest :
+  - 1) Random Forest :
+       - Used Grid Search to test various parameters like max_depth, min_samples_leaf, min_samples_split and built Random Forest Classifier.
+       - Got the best estimator with max_depth = 6, min_samples_leaf = 20, min_samples_split = 80.
+       - Results on test dataset:
+         - Precision : 79.29
+         - Recall : 76.10
+       
+  - 2) Support Vector Machine:
+       -  using similart cut-off probability, 0.47, got below results on test set:
+       -  Precision : 79.40
+       -  Recall : 72.63
+           
+# 10) Ensembling Classification Models:
+   - Used Stacking Classifier to emsemble Logistic Regression Model, Supprt Vector Machine Classification Model and Random Forest Classification Model.
+   - Used label encoded data instead of one-hot endoded data because it was better compatible with all 3 classifiers.
+   - Selected Logictic Regression as meta model.
+   - Got below results on test data using probability cut-off 0.45:
+      - Precision : 78.10
+      - Recall : 77.22
+- Although precision percentage has not increased significantly, but the recall has increased by almost 6 %, which makes number of cases predicted as converted by our model 824 which was 763 as predicted by LR model.
+- This still contributes to 8% increase in converted cases over LR model, which is significant in terms of business. 
 -------------------------------------------------------------------------------------------------------------------
 
 
