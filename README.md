@@ -163,7 +163,30 @@ decrease in specificity).
   - By implementing the model to our business, definitely there would be some extent of misclassification and we could encounter opportunity loss, ultimately resulting into revenue loss.
   - For our businees, we are more inclined towards finding out the extent to which our model can predict conversion ratio and the opportinity loss related to the misclassified cases.
   - And, this can be achieved by finding out Precision(Positive Predictive Values) and Recall(True Positive Rate).
-  - 
+  - We have already found out the above metrics, let's dive deeper into their interpretation and find out optimal probability cut-off value.
 
-7) Conclusion
-8) Using PCA to verify the model performance.
+  6.4) Precision recall tradeoff
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/cabfa195-5e7a-473e-8b65-f19b192d087c)
+
+  - From precision recall graph, we can take 0.42 as optimal final probability cutoff.  but as our target is to predict around 80% leads which are being successfully converted, we can even choose cut-off higher than 0.42 to increase the precision of our model but at the cost of decreased positive predictive values. Lets choose cutoff as 0.47.
+      - At cut-off 0.47, found out the evaluation metrics as follows:
+        1) Precision : 78.04
+        2) Recall : 73.51
+      - As we can see, we are getting around 78% precision and sensitivity is around 74%. So, if we completely depend on the predictions of our model, then we can still achieve around 74% (Recall) of current the revenue, while only catering to 2290 (Predicted as converted by our model) leads which accounts to around 36% of the leads.
+      - As our aim was to increase the conversion ratio to around 80%, we are able to reach close to this figure.
+      - Let's find out test results.
+        
+  6.5) Making predictions on the test set:
+    - At cut-off 0.47, found out the evaluation metrics on test set as follows:
+      1) Precision : 77.22
+      2) Recall : 71.50
+      
+7) Conclusion (Based on test data): Cut-off Lead Score - 47
+   
+- We were able to achieve around 77% precision and around 72% recall on test data set.
+- So, initially if we focus only on leads which are predicted as potential leads by our model, then we can successfully convert almost 77% from them and these 77% of the leads will give us 72% of the current revenue/business.
+- Also, the model has predicted that out of total leads, 36% will get converted, so initially we do not need to focus on rest of the leads, which reduces the workload by 64%.   
+- At the cost of 28% business, we can reduce the work load by almost 64%.
+- Later on, as per the availability of workforce or time, we can focus on rest of the leads having lead score less than 47 and capitalize rest of the potential leads to increase the business/revenue. But it should be noted that the conversion ratio would gradually keep on decreasing with decrease in cut-off score. 
+   
+8) Using PCA to verify the model performance:
