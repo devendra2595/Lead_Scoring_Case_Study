@@ -24,6 +24,8 @@ Our aim is to build a Classification model (logistic regression model) and ident
 6) Predictions and Model evaluation
 7) Conclusion
 8) Using PCA to verify the model performance.
+9) Building Classification Model using Support Vector Machine and Random Forest
+10) Ensembling classification models.
 
 
 # 1) Reading and understanding the data
