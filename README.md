@@ -149,8 +149,21 @@ decrease in specificity).
   
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/f59473d0-088a-420a-9672-851495425b6e)
 
-
-
+  6.3) Finding Optimal Cutoff Point:
+  - Optimal cutoff probability is that prob where we get balanced sensitivity and specificity.
+  - Found out Sensitivity, Specificity and Accuracy at various probability cut-offs from 0 to 0.9 so that by plotting line chart we would get an idea where all the metrics have balanced values.
+![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/26439a76-f6db-4f92-b62a-4dc83f2cd4ab)
+  - At cut-off 0.36, found out the evaluation metrics as follows:
+    1) Sensitivity (TPR)- 80.60
+    2) Specificity - 82.43
+    3) False Positive Rate (FPR) - 17.56
+    4) Positive Predictive Value - 73.90
+    5) Negative Predictive Value - 87.32
+  - We can observe the improvement in the Sensitivity but Specificity is decreasing. So, as per the business requirements we can tweak the probability cut-off and attain desired results.
+  - By implementing the model to our business, definitely there would be some extent of misclassification and we could encounter opportunity loss, ultimately resulting into revenue loss.
+  - For our businees, we are more inclined towards finding out the extent to which our model can predict conversion ratio and the opportinity loss related to the misclassified cases.
+  - And, this can be achieved by finding out Precision(Positive Predictive Values) and Recall(True Positive Rate).
+  - 
 
 7) Conclusion
 8) Using PCA to verify the model performance.
