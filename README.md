@@ -193,3 +193,9 @@ decrease in specificity).
    - By using PCA algorithm, with cut-off at 0.47, found out the evaluation metrics on test set as follows:
       1) Precision : 75.62
       2) Recall : 70.66
+  - As we can see that, the logistic regression model that we built by using statsmodels and PCA have almost similar metric scores on test dataset.
+  - So we can say that, we have used right predictors to build or LR model.
+
+-------------------------------------------------------------------------------------------------------------------
+
+
