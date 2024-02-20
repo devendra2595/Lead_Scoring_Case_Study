@@ -189,7 +189,7 @@ decrease in specificity).
 - At the cost of 28% business, we can reduce the work load by almost 64%.
 - Later on, as per the availability of workforce or time, we can focus on rest of the leads having lead score less than 47 and capitalize rest of the potential leads to increase the business/revenue. But it should be noted that the conversion ratio would gradually keep on decreasing with decrease in cut-off score.
    
-8) Using Principal Component Analysis to verify the model performance:
+# 8) Using Principal Component Analysis to verify the model performance:
    - By using PCA algorithm, with cut-off at 0.47, found out the evaluation metrics on test set as follows:
       1) Precision : 75.62
       2) Recall : 70.66
