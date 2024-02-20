@@ -177,7 +177,7 @@ decrease in specificity).
       - Let's find out test results.
         
   6.5) Making predictions on the test set:
-    - At cut-off 0.47, found out the evaluation metrics on test set as follows:
+  - At cut-off 0.47, found out the evaluation metrics on test set as follows:
       1) Precision : 77.22
       2) Recall : 71.50
       
