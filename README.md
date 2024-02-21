@@ -47,7 +47,7 @@ The data imbalance is 38.54%.
   2.1.1) Handling Missing values in Categorical Variables:
       - Formed a new category named 'Unspecified' in each variable having missing values less than 40% and more than 5%. e.g City, Specialization, Occupation.
       - The missing values from 'Lead Source' variable were missing at random, imputed them with 'Reference'.
-    2.1.2) Handling Missing values in Numerical Variables:
+  2.1.2) Handling Missing values in Numerical Variables:
         'TotalVisits'
       - The majority of missing values from 'TotalVisits' variable had Lead Origin as 'Lead Add From' and 'Lead Import', and both these categories may signify that the lead has been added manually by the sales person into the system from a different Source which could be the reason TotalVisits not being captured.
       - Almost all the records of 'TotalVisits' variable with Lead Origin as 'Lead Add Form' or 'Lead Import' were 0. so imputed missing values with with 0.
