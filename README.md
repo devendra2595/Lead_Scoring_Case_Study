@@ -44,13 +44,14 @@ The data imbalance is 38.54%.
   2.1) Handling Missing Values:
     - Some variables contained 'Select' value which is as good as Null, so imputed 'Select' with np.NaN.
     - Dropped variables with more than 40% missing values. imputing them with any suitable value would have caused skewness in the data and ultimately misinterpretation.
-      2.1.1) Handling Missing values in Categorical Variables:
-      - Formed a new category named 'Unspecified' in each variable having missing values less than 40% and more than 5%. e.g City, Specialization, Occupation.
-      - The missing values from 'Lead Source' variable were missing at random, imputed them with 'Reference'.
-2.1.2) Handling Missing values in Numerical Variables:
-    - The majority of missing values from 'TotalVisits' variable had Lead Origin as 'Lead Add From' and 'Lead Import', and both these categories may signify that the lead has been added manually by the sales person into the system from a different Source which could be the reason TotalVisits not being captured.
-    - Almost all the records of 'TotalVisits' variable with Lead Origin as 'Lead Add Form' or 'Lead Import' were 0. so imputed missing values with with 0.
-    - As 'TotalVisits' were 0, the 'Page Views Per Visit' also became 0.
+      - 2.1.1) Handling Missing values in Categorical Variables:
+          - Formed a new category named 'Unspecified' in each variable having missing values less than 40% and more than 5%. e.
+City, Specialization, Occupation.
+          - The missing values from 'Lead Source' variable were missing at random, imputed them with 'Reference'.
+      - 2.1.2) Handling Missing values in Numerical Variables:
+          - The majority of missing values from 'TotalVisits' variable had Lead Origin as 'Lead Add From' and 'Lead Import', and both these categories may signify that the lead has been added manually by the sales person into the system from a different Source which could be the reason TotalVisits not being captured.
+          - Almost all the records of 'TotalVisits' variable with Lead Origin as 'Lead Add Form' or 'Lead Import' were 0. so imputed missing values with with 0.
+          - As 'TotalVisits' were 0, the 'Page Views Per Visit' also became 0.
 
   2.2) Data Transformation:
     - Dropped unnecessary variables whch were not suitable for model building, like highly skewed, conveying similar information etc.
