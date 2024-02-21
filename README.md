@@ -44,7 +44,7 @@ The data imbalance is 38.54%.
   2.1) Handling Missing Values:
   - Some variables contained 'Select' value which is as good as Null, so imputed 'Select' with np.NaN.
   - Dropped variables with more than 40% missing values. imputing them with any suitable value would have caused skewness in the data and ultimately misinterpretation.
-    2.1.1) Handling Missing values in Categorical Variables:
+  2.1.1) Handling Missing values in Categorical Variables:
       - Formed a new category named 'Unspecified' in each variable having missing values less than 40% and more than 5%. e.g City, Specialization, Occupation.
       - The missing values from 'Lead Source' variable were missing at random, imputed them with 'Reference'.
     2.1.2) Handling Missing values in Numerical Variables:
