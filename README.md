@@ -183,20 +183,21 @@ decrease in specificity).
       1) Precision : 77.22
       2) Recall : 71.50
       
-# 7) Conclusion (Based on test data): Cut-off Lead Score - 47
+   
+# 7) Using Principal Component Analysis to verify the model performance:
+   - By using PCA algorithm, with cut-off at 0.47, found out the evaluation metrics on test set as follows:
+      1) Precision : 77
+      2) Recall : 72
+  - As we can see that, the logistic regression model that we built by using statsmodels and PCA have almost similar metric scores on test dataset.
+  - So we can say that, we have used right predictors to build or LR model.
+
+# 8) Conclusion (Based on test data): Cut-off Lead Score - 47
    
 - We were able to achieve around 77% precision and around 72% recall on test data set.
 - So, initially if we focus only on leads which are predicted as potential leads by our model, then we can successfully convert almost 77% from them and these 77% of the leads will give us 72% of the current revenue/business.
 - Also, the model has predicted that out of total leads, 36% will get converted, so initially we do not need to focus on rest of the leads, which reduces the workload by 64%.   
 - At the cost of 28% business, we can reduce the work load by almost 64%.
 - Later on, as per the availability of workforce or time, we can focus on rest of the leads having lead score less than 47 and capitalize rest of the potential leads to increase the business/revenue. But it should be noted that the conversion ratio would gradually keep on decreasing with decrease in cut-off score.
-   
-# 8) Using Principal Component Analysis to verify the model performance:
-   - By using PCA algorithm, with cut-off at 0.47, found out the evaluation metrics on test set as follows:
-      1) Precision : 77
-      2) Recall : 72
-  - As we can see that, the logistic regression model that we built by using statsmodels and PCA have almost similar metric scores on test dataset.
-  - So we can say that, we have used right predictors to build or LR model.
 
 # 9) Building Classification Model using Support Vector Machine and Random Forest :
   - 1) Random Forest :
