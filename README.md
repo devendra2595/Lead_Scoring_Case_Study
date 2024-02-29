@@ -168,6 +168,7 @@ decrease in specificity).
   - We have already found out the above metrics, let's dive deeper into their interpretation and find out optimal probability cut-off value.
 
   6.4) Precision recall tradeoff
+  
 ![image](https://github.com/devendra2595/Lead_Scoring_Case_Study/assets/116253033/cabfa195-5e7a-473e-8b65-f19b192d087c)
 
   - From precision recall graph, we can take 0.42 as optimal final probability cutoff.  but as our target is to predict around 80% leads which are being successfully converted, we can even choose cut-off higher than 0.42 to increase the precision of our model but at the cost of decreased positive predictive values. Lets choose cutoff as 0.47.
